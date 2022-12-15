@@ -1,1 +1,421 @@
-Hello! - The homepage is coming soon.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>globetrotter.finance</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="globetrotter.finance co">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" color="#6366f1" href="assets/favicon/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="white">
+    <!-- Theme mode-->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+      
+      
+    </script>
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #121519;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #6f788b;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #d7dde2; 
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        background-color: rgba(255,255,255,.25);
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1500);
+        };
+      })();
+      
+    </script>
+    <!-- Import Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
+    <!-- Vendor styles-->
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/aos/dist/aos.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <!-- Page wrapper-->
+    <main class="page-wrapper">
+      <div class="dark-mode">
+        <!-- Navbar. Remove 'fixed-top' class to make the navigation bar scrollable with the page-->
+        <header class="navbar navbar-expand-lg fixed-top">
+          <div class="container"><a class="navbar-brand pe-sm-3" href="index.html">
+          	<span class="text-primary flex-shrink-0 me-2">
+                <!-- Insert logo here -->
+		  	</span>globetrotter.finance</a>
+            <a class="btn btn-primary btn-sm rounded-pill fs-sm order-lg-3 d-none d-sm-inline-flex" href="https://forms.gle/uUir7GYnC1vKEvLA9" target="_blank" rel="noopener"><i class="ai-mail fs-xl me-2 ms-n1"></i>Request a Demo</a>
+			
+            <button class="navbar-toggler ms-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+			
+            <nav class="collapse navbar-collapse" id="navbarNav">
+              <!-- <ul class="navbar-nav navbar-nav-scroll me-auto" style="--ar-scroll-height: 520px;">
+                <li class="nav-item"><a class="nav-link" href="components/typography.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="docs/getting-started.html">About us</a></li>
+              </ul> -->
+              <div class="d-sm-none p-3 mt-n3"><a class="btn btn-primary w-100 mb-1 mt-3" href="https://forms.gle/uUir7GYnC1vKEvLA9" target="_blank" rel="noopener"><i class="ai-mail fs-xl me-2 ms-n1"></i>Request a Demo</a></div>
+            </nav>
+          </div>
+        </header>
+      </div>
+      <!-- Page content-->
+      <!-- Hero-->
+      <section class="bg-dark dark-mode d-flex min-vh-100 position-relative overflow-hidden py-5">
+        <div class="container d-flex flex-column justify-content-center position-relative zindex-2 pt-sm-3 pt-md-4 pt-xl-5 pb-1 pb-sm-3 pb-lg-4 pb-xl-5">
+          <div class="row flex-lg-nowrap align-items-center pb-5 pt-2 pt-lg-4 pt-xl-0 mt-lg-4 mt-xl-0">
+            <div class="col-lg-7 order-lg-2 ms-lg-4 mb-2 mb-lg-0">
+              <div class="parallax order-lg-2 mx-auto" style="max-width: 740px;">
+                <div class="parallax-layer" data-depth="0.1"><img src="assets/img/landing/saas-2/hero/hero-digital-trust.png" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="-0.05"><img src="assets/img/landing/saas-2/hero/02.png" style="animation: rotate-cw 100s linear infinite;" alt="Layer"></div>
+                <div class="parallax-layer zindex-2" data-depth="0.3"><img src="assets/img/landing/saas-2/hero/03.png" alt="Layer"></div>
+                <div class="parallax-layer zindex-2" data-depth="0.15"><img src="assets/img/landing/saas-2/hero/06.png" alt="Layer"></div>
+                <div class="parallax-layer zindex-2" data-depth="0.4"><img src="assets/img/landing/saas-2/hero/05.png" alt="Layer"></div>
+              </div>
+            </div>
+			<div class="col-lg-5 order-lg-1 text-center text-lg-start me-xl-5">
+              <h1 class="display-4 py-3 my-2 mb-xl-3">Eliminate Fraud.<br>Build Trust.</h1>
+              <ul class="list-unstyled d-table text-start mx-auto mx-lg-0 mb-0">
+			  	<li class="d-flex pb-2 mb-1"><i class="ai-check-alt text-primary lead me-2"></i><span class="h4">Advanced fraud protection with actionable intelligence</span></li>
+          <li class="d-flex pb-2 mb-1"><i class="ai-check-alt text-primary lead me-2"></i><span class="h4">Reliable shield and powerful solution for your compliance needs</span></li>
+			  	<li class="d-flex pb-2 mb-1"><i class="ai-check-alt text-primary lead me-2"></i><span class="h4">Frictionless customer experience</span></li>
+              </ul>
+              <div class="d-flex justify-content-center justify-content-lg-start pt-4 pt-xl-5">
+                <div class="text-center"><a class="btn btn-lg btn-primary rounded-pill w-100 w-sm-auto" href="https://forms.gle/uUir7GYnC1vKEvLA9" target="_blank" rel="noopener">Request a Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ease of use -->
+          <div class="row pb-0 mb-1">
+
+              <!-- <div class="col-4" style="min-width: 19rem;"> -->
+              <div class="col-sm-12 col-lg-4 col-md-4 mb-2 p-2">
+                <div class="card border-primary py-lg-1">
+                  <div class="card-body w-100 mx-auto" style="max-width: 21rem;">
+                    <div class="d-flex align-items-center border-bottom pb-4 mb-4">
+                      <div class="bg-info rounded flex-shrink-0 p-2"><img class="d-block m-1" src="assets/img/landing/saas-1/pricing/starter.svg" width="44" alt="Icon"></div>
+                      <div class="ps-3">
+                        <h3 class="h4 text-info mb-0">Quick onboarding</h3>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled mb-1">
+                      <li class="d-flex pb-1 mb-2"><i class="ai-check fs-xl mt-1 me-2"></i>Secure and Seamless API integration</li>
+                      <li class="d-flex pb-1 mb-2"><i class="ai-check fs-xl mt-1 me-2"></i>Get started in few mins</li>
+                      <li class="d-flex pb-1 mb-2"><i class="ai-check fs-xl mt-1 me-2"></i>All in one-cloud environment & one-click deployment</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="col-4" style="min-width: 19rem;"> -->
+              <div class="col-sm-12 col-lg-4 col-md-4 mb-2 p-2">
+                <div class="card border-primary py-lg-1">
+                  <div class="card-body w-100 mx-auto" style="max-width: 21rem;">
+                    <div class="d-flex align-items-center border-bottom pb-4 mb-4">
+                      <div class="bg-primary rounded flex-shrink-0 p-2"><img class="d-block m-1" src="assets/img/landing/saas-1/pricing/business.svg" width="44" alt="Icon"></div>
+                      <div class="ps-3">
+                        <h3 class="h4 text-primary mb-0">Automated Detection</h3>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled mb-1">
+                      <li class="d-flex pb-1 mb-2"><i class="ai-check fs-xl mt-1 me-2"></i>Advanced suspicius activity detection</li>
+                      <li class="d-flex pb-1 mb-2"><i class="ai-check fs-xl mt-1 me-2"></i>Network & IP analysis</li>
+                      <li class="d-flex pb-1 mb-2"><i class="ai-check fs-xl mt-1 me-2"></i>Digital footprint behavior assessment</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="col-4" style="min-width: 19rem;"> -->
+              <div class="col-sm-12 col-lg-4 col-md-4 mb-2 p-2">
+                <div class="card border-primary py-lg-1">
+                  <div class="card-body w-100 mx-auto" style="max-width: 21rem;">
+                    <div class="d-flex align-items-center border-bottom pb-4 mb-4">
+                      <div class="bg-warning rounded flex-shrink-0 p-2"><img class="d-block m-1" src="assets/img/landing/saas-1/pricing/premium.svg" width="44" alt="Icon"></div>
+                      <div class="ps-3">
+                        <h3 class="h4 text-warning mb-0">Custom Rules and Features</h3>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled mb-1">
+                      <li class="d-flex pb-1 mb-2"><i class="ai-check fs-xl mt-1 me-2"></i>Use from wide range of pre-defined rules</li>
+                      <li class="d-flex pb-1 mb-2"><i class="ai-check fs-xl mt-1 me-2"></i>Create your custom rules</li>
+                      <li class="d-flex pb-1 mb-2"><i class="ai-check fs-xl mt-1 me-2"></i>Use Data explorer to hypothesize new rules</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </section>
+
+
+      <!-- Features-->
+      <section class="bg-secondary py-5">
+        <div class="container mt-1 py-md-2 py-lg-4 py-xxl-5">
+          <h2 class="h1 text-center pt-1 pt-sm-4">Take your data signals to the next level</h2>
+          <!-- <p class="text-center mx-auto pb-3 mb-3 mb-lg-4" style="max-width: 480px;">Using basic data skills you can analysis and improve your business indicators with Around</p> -->
+          <div class="row g-4 pb-2 pb-sm-4 mb-sm-2 mt-4">
+            <!-- Item-->
+            <div class="col-md-5">
+              <div class="card border-0 h-100">
+                <div class="card-body"><a href="#"><img class="d-dark-mode-none" src="assets/img/landing/saas-2/features/04-light.png" alt="Image"><img class="d-none d-dark-mode-block" src="assets/img/landing/saas-2/features/04-dark.png" alt="Image"></a>
+                  <div class="pt-3 mt-2 mt-lg-3">
+                    <h3>Digital Behaviors and Signals</h3>
+                    <p class="mb-0">
+                      Track outliers with innovative digital behavior analysis, network location assessment and fingerprinting technologies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-md-7">
+              <div class="card border-0 h-100">
+                <div class="card-body overflow-hidden">
+                  <div class="d-sm-flex align-items-center"><a class="d-block order-sm-2 flex-shrink-0 mt-n4 mb-n2" href="#"><img src="assets/img/landing/saas-2/features/02.png" width="308" alt="Image"></a>
+                    <div class="order-sm-1 pe-sm-3 me-xl-4">
+                      <h3>Incident case management</h3>
+                      <p class="pb-3 mb-1 mb-xl-3">Manage incendents in one place with detailed Audit trails, custom notes and attachments. <br><br>File regulatory compliance UAR and SAR filings in one click.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-md-7">
+              <div class="card border-0 h-100">
+                <div class="card-body overflow-hidden">
+                  <div class="d-sm-flex align-items-center"><a class="d-block order-sm-2 flex-shrink-0 mt-n4 mb-n2" href="#"><img class="d-dark-mode-none" src="assets/img/landing/saas-2/features/03-light.png" width="308" alt="Image"><img class="d-none d-dark-mode-block" src="assets/img/landing/saas-2/features/03-dark.png" width="308" alt="Image"></a>
+                    <div class="order-sm-1 pe-sm-3 me-xl-4">
+                      <h3>Custom rules builder</h3>
+                      <p class="pb-3 mb-1 mb-xl-3">Choose from pre-defined set of rules and features, or, create your own custom rules and thresholds to suit your business requirements and product types.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-md-5">
+              <div class="card border-0 h-100">
+                <div class="card-body"><a href="#"><img class="d-dark-mode-none" src="assets/img/landing/saas-2/features/01-light.png" alt="Image"><img class="d-none d-dark-mode-block" src="assets/img/landing/saas-2/features/01-dark.pngassets/img/landing/saas-2/features/01-dark.png" alt="Image"></a>
+                  <div class="pt-3 mt-2 mt-lg-3">
+                    <h3>Dashboard and Data Explorer</h3>
+                    <p class="mb-0">Holistic view of data signals & detections in one place. Slice and dice signals per your custom needs</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- How it works (Steps)-->
+      <section class="overflow-hidden pt-5 mt-md-3 mt-lg-2 mt-xl-4 mt-xxl-5 mb-5">
+        <div class="container pt-2 pt-sm-4 pt-lg-5">
+          <h2 class="h1 text-center pb-3 mb-3 mb-lg-4">How does it work?</h2>
+          <!-- Step-->
+          <div class="row align-items-center position-relative pb-5 pb-lg-0 mb-1 mb-sm-2 mb-md-4 mb-lg-0">
+            <div class="col-md-6 col-xl-5 offset-lg-1 order-md-2 pb-2 pb-md-0 mb-4 mb-md-0" data-aos="fade-left" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md"><img class="d-dark-mode-none" src="assets/img/landing/saas-2/steps/01-light.png" width="525" alt="Image"><img class="d-none d-dark-mode-block" src="assets/img/landing/saas-2/steps/01-dark.png" width="525" alt="Image"></div>
+            <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1" data-aos="fade-right" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md">
+              <div class="pe-md-4 pe-lg-0"><span class="badge fs-sm bg-faded-primary text-primary mb-3 mb-lg-4">Step 01</span>
+                <h3 class="h2 mb-3 mb-lg-4">Connect your transactions with our real-time APIs</h3>
+                <p class="pb-1 pb-lg-0 mb-4 mb-lg-5">Prepare your data per a standard schema and integrate it with our simple and fast APIs either in batch or real-time mode.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Arrow-->
+          <div class="d-none d-lg-flex justify-content-center" data-aos="fade-in" data-aos-duration="500" data-aos-offset="250">
+            <svg class="d-block text-primary" width="339" height="365" viewBox="0 0 339 365" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: -150px; margin-top: -140px; margin-bottom: -108px;">
+              <path d="M324 291.371C120.111 291.37 240.756 58.7225 1.00032 73.2606" stroke="url(#arrow1)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"></path>
+              <path d="M337.375 290.62C338.074 290.998 338.074 292.001 337.375 292.379L328.476 297.196C327.81 297.557 327 297.074 327 296.317L327 286.683C327 285.925 327.81 285.443 328.476 285.803L337.375 290.62Z" fill="currentColor"></path>
+              <defs>
+                <linearGradient id="arrow1" x1="324" y1="291.5" x2="-2.99974" y2="72.4997" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="currentColor"></stop>
+                  <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <!-- Step-->
+          <div class="row align-items-center position-relative pb-5 pb-lg-0 mb-1 mb-sm-2 mb-md-4 mb-lg-0">
+            <div class="col-md-6 col-xl-5 offset-xl-1 pb-2 pb-md-0 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md"><img class="d-dark-mode-none" src="assets/img/landing/saas-2/steps/02-light.png" width="473" alt="Image"><img class="d-none d-dark-mode-block" src="assets/img/landing/saas-2/steps/02-dark.png" width="473" alt="Image"></div>
+            <div class="col-md-6 col-lg-5 col-xl-4 offset-lg-1" data-aos="fade-left" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md">
+              <div class="ps-md-4 ps-lg-0"><span class="badge fs-sm bg-faded-primary text-primary mb-3 mb-lg-4">Step 02</span>
+                <h3 class="h2 mb-3 mb-lg-4">Monitoring and Detection engine</h3>
+                <p class="pb-1 pb-lg-0 mb-4 mb-lg-5">Our engine starts to process your data and digital signals in real-time to keep away unwanted played and transactions for a frictionless digital customer experience.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Arrow-->
+          <div class="d-none d-lg-flex justify-content-center" data-aos="fade-in" data-aos-duration="500" data-aos-offset="250">
+            <svg class="d-block text-primary" width="263" height="275" viewBox="0 0 263 275" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-top: -60px; margin-left: -120px; margin-bottom: -80px;">
+              <path d="M8.13678 249.647C7.47108 250.081 6.59001 249.602 6.59106 248.808L6.60444 238.689C6.60544 237.931 7.4158 237.45 8.08162 237.811L16.5478 242.408C17.2136 242.77 17.2512 243.712 16.6163 244.125L8.13678 249.647Z" fill="currentColor"></path>
+              <path d="M261.961 37.8891C216.908 65.6243 128.226 135.486 133.916 193.05C141.029 265.005 265.134 173.468 173.666 148.634C89.2542 125.715 30.9125 210.547 13.9796 236.702" stroke="url(#arrow2)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6"></path>
+              <defs>
+                <linearGradient id="arrow2" x1="13.9797" y1="234.5" x2="276.704" y2="60.1939" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="currentColor"></stop>
+                  <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <!-- Step-->
+          <div class="row align-items-center position-relative">
+            <div class="col-md-6 col-xl-5 offset-lg-1 order-md-2 d-md-flex justify-content-end pb-2 pb-md-0 mb-4 mb-md-0" data-aos="fade-left" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md"><img class="d-dark-mode-none" src="assets/img/landing/saas-2/steps/03-light.png" width="473" alt="Image"><img class="d-none d-dark-mode-block" src="assets/img/landing/saas-2/steps/03-dark.png" width="473" alt="Image"></div>
+            <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1" data-aos="fade-right" data-aos-duration="500" data-aos-offset="250" data-disable-parallax-down="md">
+              <div class="pe-md-4 pe-lg-0"><span class="badge fs-sm bg-faded-primary text-primary mb-3 mb-lg-4">Step 03</span>
+                <h3 class="h2 mb-3 mb-lg-4">Manage case and Regulatory reports</h3>
+                <p class="pb-1 pb-lg-0 mb-4 mb-lg-5">
+                  Start managing cases in our Case management portal and prepare regulatory filings (SAR, UAR) in single click.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- Footer-->
+    <footer class="footer dark-mode bg-dark py-2">
+      <div class="container pt-md-1 pt-lg-1 pt-xl-1 mt-4">
+        <div class="row pb-2 pt-sm-1 mb-lg-1">
+          <div class="col-md-4 col-lg-3 pb-2 pb-md-0 mb-1 mb-md-0"><a class="navbar-brand py-0 mb-3 mb-md-4" href="index.html"><span class="text-light">&copy; globetrotter.finance</span></a>
+            <p class="fs-sm pb-2 pb-md-3 mb-3">Reliable shield and powerful solution for your compliance and fraud mitigation needs.<br><br>
+              <a href="mailto:hello@globetrotter.finance">Email: hello @ globetrotter.finance</a>
+            </p>
+
+            
+
+      </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll>
+      <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+      </svg><i class="ai-arrow-up"></i></a>
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/aos/dist/aos.js"></script>
+    <!-- Main theme script-->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
