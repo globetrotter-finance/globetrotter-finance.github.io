@@ -1,0 +1,5 @@
+# Allow crawling
+User-agent: *
+Allow: /
+
+Sitemap: https://globetrotter.finance/sitemap.txt
