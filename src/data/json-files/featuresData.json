@@ -18,11 +18,49 @@
 		"category": "saras-dd"
 	},
 	{
-		"title": "Task Management",
+		"title": "Company Frauds",
+		"icon": "squares-plus",
+		"description": "Get fraudulent activities within companies and take informed decisions.",
+		"category": "saras-dd"
+	},
+
+
+
+
+	{
+		"title": "Analyse Contracts",
 		"icon": "cliboard-document-check",
-		"description": "Efficiently manage tasks and projects with Foxi's intuitive task management tools. Assign, track progress, and collaborate seamlessly.",
+		"description": "Are you trapped with your contracts? Are they drafted one-sided? We can help you identify them.",
 		"category": "saras-ci"
 	},
+	{
+		"title": "Track Contracts Deadlines",
+		"icon": "cliboard-document-check",
+		"description": "Tracking contracts could be haunting, we can help you identify them and send notifications.",
+		"category": "saras-ci"
+	},
+	{
+		"title": "Create Drafts",
+		"icon": "cliboard-document-check",
+		"description": "Even generating contracts are now easy with our AI solutions. Choose from our templates and be ahead of time.",
+		"category": "saras-ci"
+	},
+	{
+		"title": "Idemnity",
+		"icon": "cliboard-document-check",
+		"description": "Getting all the idemnity details from the contracts are now easy with our AI tailored solutions.",
+		"category": "saras-ci"
+	},
+	{
+		"title": "Legal Battles",
+		"icon": "cliboard-document-check",
+		"description": "Get details on all the previous legal battles and take help from our tool to generate winning arguments.",
+		"category": "saras-ci"
+	},
+
+
+
+
 	{
 		"title": "Notice Reconciliation",
 		"icon": "cliboard-document-check",
@@ -30,7 +68,7 @@
 		"category": "saras-gst"
 	},
 	{
-		"title": "Notice Deadlines",
+		"title": "Notice Deadlines Tracking",
 		"icon": "cliboard-document-check",
 		"description": "Have notices that have deadlines, get intelligent notifications automatically so you do not have to remember them and miss the dates.",
 		"category": "saras-gst"
@@ -41,34 +79,130 @@
 		"description": "Do not have a hard time planning the advance tax. Upload your trial balance and get the tax details in seconds.",
 		"category": "saras-gst"
 	},
+
+
+
+
 	{
-		"title": "Third-Party Apps",
+		"title": "Bots & Consultancy",
 		"icon": "rocket",
-		"description": "Connect Foxi with your favorite tools and apps effortlessly. Streamline workflows and enhance productivity with seamless integrations.",
+		"description": "We have tailored the LLM bot to answer the most complex problems you might have. Not only you get answers to your question, we also analyse the previous case laws and give you analysis.",
 		"category": "saras-chat"
 	},
 	{
-		"title": "Mobile Accessibility",
+		"title": "File Bots",
+		"icon": "rocket",
+		"description": "Often this is needed to talk to your own file, its easy to do so. Upload your file and talk to them. Get summary and be ahead of time.",
+		"category": "saras-chat"
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+	{
+		"title": "Track Conversion",
 		"icon": "device-phone-mobile",
-		"description": "Stay productive on the go with Foxi's mobile app. Access key features, collaborate with your team, and manage tasks anytime, anywhere.",
+		"description": "Most digital business do not have traffic problems. They have conversion and retention problems. With our GDPR compliant tracker, get ahead in your business with best in class analysis.",
 		"category": "mantarays-leak"
 	},
 	{
-		"title": "Dedicated Customer Support",
+		"title": "Detect Revenue Leaks",
 		"icon": "trophy",
-		"description": "Receive exceptional customer support whenever you need it. Our dedicated team is here 24/7 to assist you with any questions or issues.",
+		"description": "Uncovered digital assets are difficult to find. We can help you. Convert the anlytical data to your business acumen and get revenue leakages measured.",
+		"category": "mantarays-leak"
+	},
+
+
+
+
+	{
+		"title": "Optimise Performance",
+		"icon": "trophy",
+		"description": "Our consultants work with you on the identified leakages to fix them and tailor more conversion.",
 		"category": "mantarays-opt"
 	},
+
+
+
+
+
+
+
+
+
+
+
+
 	{
-		"title": "Robust Data Security",
+		"title": "Face 1:1 Match",
 		"icon": "shield-check",
-		"description": "Rest assured knowing your data is safe with Foxi's robust security measures. We employ industry-standard protocols to protect your information.",
+		"description": "Matching face with best in class accuracy using our proprietary AI Models. We claim to have 99.87% accuracy on FDDB.",
 		"category": "kuber-id"
 	},
 	{
-		"title": "Scalability",
+		"title": "Face Quality Checks",
+		"icon": "shield-check",
+		"description": "It is important to have quality checks done on the faces, like black & white detection, non live faces (captured from printed / digital copy), face morphed etc. Our ready to use API can help you detect 15+ data points on facial images.",
+		"category": "kuber-id"
+	},
+	{
+		"title": "Deduplication 1:N Search",
+		"icon": "shield-check",
+		"description": "Want to quickly find returning faces from your database? We can help you find repeat customers of 40MM+ database in less than 1s processing time.",
+		"category": "kuber-id"
+	},
+	{
+		"title": "OCR",
+		"icon": "shield-check",
+		"description": "Extracting data from the scanned documents are now easy with our ready to use APIs.",
+		"category": "kuber-id"
+	},
+
+
+
+
+	{
+		"title": "Quick Onboarding",
 		"icon": "arrow-treding-up",
-		"description": "Grow your business with confidence using Foxi's scalable platform. Whether you're a startup or a large enterprise, our solution adapts to your needs.",
+		"description": "Our AML tools are very easy to integrate and use. APIs are accessible to add details for your customers, accounts and transactions.",
+		"category": "kuber-aml"
+	},
+	{
+		"title": "In-Flight Suspicious Detection",
+		"icon": "arrow-treding-up",
+		"description": "You can use out-of-the-box rules or write your own rule to block your transactions whiel adding the transactions.",
+		"category": "kuber-aml"
+	},
+	{
+		"title": "Scheduled Suspicious Detection",
+		"icon": "arrow-treding-up",
+		"description": "Rules could also be written to detect daily / weekly / monthly transaction / account or customer level data.",
+		"category": "kuber-aml"
+	},
+	{
+		"title": "Create Case / Work on Existing",
+		"icon": "arrow-treding-up",
+		"description": "With each detections, the cases are created so you can track them, work on them and if needed discard. If the cases are genuine, convert them into cases.",
+		"category": "kuber-aml"
+	},
+	{
+		"title": "Regulatory Filings",
+		"icon": "arrow-treding-up",
+		"description": "You can use our out-of-the-box or create your own templates to generate Rugulatory filings reports.",
+		"category": "kuber-aml"
+	},
+	{
+		"title": "Audits & Reports",
+		"icon": "arrow-treding-up",
+		"description": "This is the most regulated space in the world. And we have taken extra care in ensuring that every changes are logged and audited.",
 		"category": "kuber-aml"
 	}
 ]

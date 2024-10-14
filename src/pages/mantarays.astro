@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro'
 // - UI
 import Feature from '../components/blocks/features/FeatureSticky.astro'
 import Hero from '../components/blocks/hero/PageHeader.astro'
+import FormHero from '../components/blocks/hero/ContactHero.astro'
 import CTA from '../components/blocks/CTA/BasicDark.astro'
 
 
@@ -29,7 +30,11 @@ const SEO = {
 // - Page Header
 const header = {
 	title: 'without digital.<strong>mantarays</strong>,<br>you are <strong>loosing customers</strong>',
-	text: 'Streamline your tasks, protect your data, and enjoy working with our tools!'
+	text: 'Plug revenue leakages from your digital assets and optimise conversions'
+}
+const contactHeader = {
+	title: 'Are you ready to work on your digital leaks and improve customer retention? We are an email away <strong>Ping us!</strong>',
+	text: "<strong>sales@globetrotter.finance</strong>"
 }
 ---
 
@@ -57,5 +62,9 @@ const header = {
 		data={mantaraysopt}
 		classes="bg-neutral-50 dark:bg-neutral-900"
 	/>
-	<hr>
+	<FormHero
+		title={contactHeader.title}
+		text={contactHeader.text}
+		id="contact"
+	/>
 </Layout>

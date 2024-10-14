@@ -4,6 +4,7 @@
 import Layout from '../layouts/Layout.astro'
 // - UI
 import Hero from '../components/blocks/hero/HomeCTA.astro'
+import FormHero from '../components/blocks/hero/ContactHero.astro'
 import Features from '../components/blocks/features/FeatureCards.astro'
 import Testimonial from '../components/blocks/testimonials/BasicDark.astro'
 import HighlightBlocks from '../components/blocks/highlights/HightlightRows.astro'
@@ -18,10 +19,19 @@ const SEO = {
 	description:
 		'Empowering businesses with cutting-edge financial security, advanced digital analytics, and comprehensive CA and legal consultancy services. Your trusted partner in safeguarding identities, optimizing performance, and ensuring compliance.'
 }
+const contactHeader = {
+	title: 'We are gaurding your identities, enhancing analytics and simplifying legalities. We are an email away <strong>Ping us!</strong>',
+	text: "<strong>sales@globetrotter.finance</strong>"
+}
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero />
 	<Features />
-	<Testimonial bg={testimonialBackground} bgPosition="right" />
+	<FormHero
+		title={contactHeader.title}
+		text={contactHeader.text}
+		id="contact"
+	/>
+	<!--<Testimonial bg={testimonialBackground} bgPosition="right" />-->
 </Layout>

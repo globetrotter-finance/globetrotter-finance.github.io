@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro'
 // - UI
 import Feature from '../components/blocks/features/FeatureSticky.astro'
 import Hero from '../components/blocks/hero/PageHeader.astro'
+import FormHero from '../components/blocks/hero/ContactHero.astro'
 import CTA from '../components/blocks/CTA/BasicDark.astro'
 
 import Section from '../components/ui/Section.astro'
@@ -30,6 +31,10 @@ const SEO = {
 const header = {
 	title: 'you seriously need, legal.<strong>saras</strong>',
 	text: '<br>accelerate due diligence processes with our efficient solutions.<br><br>receive precise answers on laws, acts, and legal documents through our customized chatbots<br><br>break free from contractual limitations with our comprehensive contract management services'
+}
+const contactHeader = {
+	title: 'Are you ready to empower your legal side of business with the help of AI? We are an email away <strong>Ping us!</strong>',
+	text: "<strong>sales@globetrotter.finance</strong>"
 }
 ---
 
@@ -69,5 +74,9 @@ const header = {
 		data={saraschat}
 		classes="bg-neutral-50 dark:bg-neutral-900"
 	/>
-	<hr>
+	<FormHero
+		title={contactHeader.title}
+		text={contactHeader.text}
+		id="contact"
+	/>
 </Layout>
