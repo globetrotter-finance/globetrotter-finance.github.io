@@ -14,11 +14,10 @@ import Col from '../components/ui/Col.astro'
 // Data
 import featuresData from '../data/json-files/featuresData.json'
 // - Feature Categories
-const featuresAnalytics = featuresData.filter((feature) => feature.category === 'Analytics')
-const featuresProductivity = featuresData.filter((feature) => feature.category === 'Productivity')
-const featuresSecurity = featuresData.filter((feature) => feature.category === 'Security')
-const featuresIntegrations = featuresData.filter((feature) => feature.category === 'Integrations')
-const featuresSupport = featuresData.filter((feature) => feature.category === 'Support')
+const sarasdd = featuresData.filter((feature) => feature.category === 'saras-dd')
+const sarasci = featuresData.filter((feature) => feature.category === 'saras-ci')
+const sarasgst = featuresData.filter((feature) => feature.category === 'saras-gst')
+const saraschat = featuresData.filter((feature) => feature.category === 'saras-chat')
 
 // Content
 // - SEO
@@ -51,24 +50,24 @@ const header = {
 	<Feature
 		title="Due Diligence"
 		text="Delve into your data with precision and uncover actionable insights."
-		data={featuresAnalytics}
+		data={sarasdd}
 	/>
 	<Feature
 		title="Contracts Intelligence"
 		text="Delve into your data with precision and uncover actionable insights."
-		data={featuresAnalytics}
+		data={sarasci}
 		classes="bg-neutral-50 dark:bg-neutral-900"
 	/>
 	<Feature
-		title="GST Automations"
+		title="Taxation & GST Automations"
 		text="Delve into your data with precision and uncover actionable insights."
-		data={featuresAnalytics}
+		data={sarasgst}
 	/>
 	<Feature
 		title="Chat & File Bots"
 		text="Streamline tasks and focus on what matters with tools designed to boost your productivity."
-		data={featuresSecurity}
+		data={saraschat}
 		classes="bg-neutral-50 dark:bg-neutral-900"
 	/>
-	<CTA />
+	<hr>
 </Layout>

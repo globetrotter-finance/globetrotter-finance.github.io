@@ -16,7 +16,6 @@ export interface Config {
 	logo: Logo
 	canonical: boolean
 	noindex: boolean
-	mode: Mode
 	scrollAnimations: boolean
 }
 
@@ -31,6 +30,5 @@ export const configData: Config = {
 	},
 	canonical: true,
 	noindex: false,
-	mode: 'auto',
 	scrollAnimations: true
 }

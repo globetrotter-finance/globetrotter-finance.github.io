@@ -10,13 +10,12 @@ export interface Logo {
 export interface FooterAbout {
 	title: string
 	aboutText: string
-	// logo: Logo
+	logo: Logo
 }
 
 export interface SubCategory {
 	subCategory: string
 	subCategoryLink: string
-	nested: SubCategory[]
 }
 
 export interface FooterColumn {
@@ -40,6 +39,7 @@ export const footerNavigationData: FooterData = {
 		aboutText:
 			'Empowering businesses with cutting-edge financial security, advanced digital analytics, and comprehensive CA and legal consultancy services. Your trusted partner in safeguarding identities, optimizing performance, and ensuring compliance.',
 		logo: {
+			alt: 'globetrotter.finance',
 			text: 'globetrotter.finance'
 		}
 	},

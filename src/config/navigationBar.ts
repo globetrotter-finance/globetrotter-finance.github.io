@@ -25,7 +25,7 @@ export interface NavData {
 
 export const navigationBarData: NavData = {
 	logo: {
-		// src: '/logo.svg',
+		src: '/logo.svg',
 		alt: 'globetrotter.finance',
 		text: 'globetrotter.finance'
 	},
@@ -35,6 +35,5 @@ export const navigationBarData: NavData = {
 		{ name: 'mantarays', link: '/mantarays' },
 		{ name: 'saras', link: '/saras' },
 		{ name: 'contact', link: '/contact' }
-	],
-	navActions: []
+	]
 }
