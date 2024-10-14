@@ -1,0 +1,74 @@
+---
+// Components
+// - Layout
+import Layout from '../layouts/Layout.astro'
+// - UI
+import Feature from '../components/blocks/features/FeatureSticky.astro'
+import Hero from '../components/blocks/hero/PageHeader.astro'
+import CTA from '../components/blocks/CTA/BasicDark.astro'
+
+import Section from '../components/ui/Section.astro'
+import Row from '../components/ui/Row.astro'
+import Col from '../components/ui/Col.astro'
+
+// Data
+import featuresData from '../data/json-files/featuresData.json'
+// - Feature Categories
+const featuresAnalytics = featuresData.filter((feature) => feature.category === 'Analytics')
+const featuresProductivity = featuresData.filter((feature) => feature.category === 'Productivity')
+const featuresSecurity = featuresData.filter((feature) => feature.category === 'Security')
+const featuresIntegrations = featuresData.filter((feature) => feature.category === 'Integrations')
+const featuresSupport = featuresData.filter((feature) => feature.category === 'Support')
+
+// Content
+// - SEO
+const SEO = {
+	title: 'globetrotter.finance | saras',
+	description:
+		"due diligence, contracts intelligence & legal excellence"
+}
+// - Page Header
+const header = {
+	title: 'you seriously need, legal.<strong>saras</strong>',
+	text: '<br>accelerate due diligence processes with our efficient solutions.<br><br>receive precise answers on laws, acts, and legal documents through our customized chatbots<br><br>break free from contractual limitations with our comprehensive contract management services'
+}
+---
+
+
+<Layout title={SEO.title} description={SEO.description}>
+	<Section id='saras-title' classes=`bg-neutral-50 dark:bg-neutral-900`>
+		<Row>
+			<Col span="12" align="center">
+				<header class="page-header">
+					<h1 set:html={header.title} />
+					<h4>
+						<p set:html={header.text} />
+					</h4>
+				</header>
+			</Col>
+		</Row>
+	</Section>
+	<Feature
+		title="Due Diligence"
+		text="Delve into your data with precision and uncover actionable insights."
+		data={featuresAnalytics}
+	/>
+	<Feature
+		title="Contracts Intelligence"
+		text="Delve into your data with precision and uncover actionable insights."
+		data={featuresAnalytics}
+		classes="bg-neutral-50 dark:bg-neutral-900"
+	/>
+	<Feature
+		title="GST Automations"
+		text="Delve into your data with precision and uncover actionable insights."
+		data={featuresAnalytics}
+	/>
+	<Feature
+		title="Chat & File Bots"
+		text="Streamline tasks and focus on what matters with tools designed to boost your productivity."
+		data={featuresSecurity}
+		classes="bg-neutral-50 dark:bg-neutral-900"
+	/>
+	<CTA />
+</Layout>

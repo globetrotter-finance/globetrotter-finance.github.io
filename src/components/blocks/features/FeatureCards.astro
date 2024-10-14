@@ -1,0 +1,87 @@
+---
+// Feature Cards grid Section
+// ------------
+// Description: A grid of cards with feature information in a 4 column layout.
+
+// Components
+// - Layout
+import Section from '../../ui/Section.astro'
+import Row from '../../ui/Row.astro'
+import Col from '../../ui/Col.astro'
+// - UI
+import Card from '../../ui/cards/FeatureCard.astro'
+
+// Content
+// - Cards
+import feature01 from '../../../assets/cards/feature-01.svg'
+import feature02 from '../../../assets/cards/feature-02.svg'
+import feature03 from '../../../assets/cards/feature-03.svg'
+import feature04 from '../../../assets/cards/feature-04.svg'
+import feature05 from '../../../assets/cards/feature-05.svg'
+---
+
+<Section id="features">
+	<Row>
+		<Col span="12" align="center" classes="mb-12 max-w-4xl mx-auto">
+			<h2 class="text-pretty">Innovative tools to <strong>transform</strong> your business</h2>
+			<p class="pb-0 text-lg">
+				Explore the suite of tools designed to streamline your business, enhance productivity, and
+				drive growth. Each product is crafted with precision to meet your needs and exceed your
+				expectations.
+			</p>
+		</Col>
+	</Row>
+	<Row>
+		<Col span="4" classes="flex flex-col gap-6">
+			<h3 class="text-pretty"><center>financial.<strong>kuber</strong></center></h3>
+			<Card
+				title="Identity Fraud Prevention"
+				subtitle="Build and nurture customer relationships with our powerful CRM system. "
+				image={feature04}
+				link="/features"
+			/>
+			<Card
+				title="Anti Money Laundering"
+				subtitle="Detects and prevents illegal financial activities by monitoring transactions. \n\nOur real-time transaction monitoring and reporting tools help you comply with regulatory requirements and prevent money laundering."
+				image={feature02}
+				link="/features"
+			/>
+		</Col>
+		<Col span="4" classes="flex flex-col gap-6">
+			<h3><center>digital.mantarays</center></h3>
+			<Card
+				title="Leakage Identification"
+				subtitle="Pinpoint where customers drop off in your sales funnel and optimize those areas to improve retention rates with our analytics tools."
+				image={feature02}
+				link="/features"
+			/>
+			<Card
+				title="Optimization Solutions"
+				subtitle="Enhance your website’s performance and user experience, leading to higher conversion rates with our comprehensive optimization solutions."
+				image={feature02}
+				link="/features"
+			/>
+		</Col>
+		<Col span="4" classes="flex flex-col gap-6">
+			<h3><center>legal.saras</center></h3>
+			<Card
+				title="Due Diligence"
+				subtitle=""
+				image={feature04}
+				link="/features"
+			/>
+			<Card
+				title="Contracts Intelligence"
+				subtitle=""
+				image={feature04}
+				link="/features"
+			/>
+			<Card
+				title="Legal Excellence"
+				subtitle=""
+				image={feature04}
+				link="/features"
+			/>
+		</Col>
+	</Row>
+</Section>
