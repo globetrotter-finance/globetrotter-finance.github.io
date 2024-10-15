@@ -26,7 +26,7 @@ export const configData: Config = {
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo.svg',
-		alt: 'Foxi. logo'
+		alt: 'globetrotter.finance'
 	},
 	canonical: true,
 	noindex: false,
