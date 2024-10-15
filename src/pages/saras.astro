@@ -11,6 +11,7 @@ import CTA from '../components/blocks/CTA/BasicDark.astro'
 import Section from '../components/ui/Section.astro'
 import Row from '../components/ui/Row.astro'
 import Col from '../components/ui/Col.astro'
+import Button from '../components/ui/Button.astro'
 
 // Data
 import featuresData from '../data/json-files/featuresData.json'
@@ -49,6 +50,10 @@ const contactHeader = {
 						<p set:html={header.text} />
 					</h4>
 				</header>
+			</Col>
+			<Col span="12" align="center">
+				<br><br>
+				<Button size="lg" style=primary elevated=true link="https://saras.globetrotter.finance/#/pages/login">Have access? Log In here.</Button>
 			</Col>
 		</Row>
 	</Section>
